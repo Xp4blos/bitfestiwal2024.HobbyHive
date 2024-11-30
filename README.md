@@ -1,2 +1,3 @@
 # bitfestiwal2024.HobbyHive
-Hackathon BitFe
+Hackathon BitFestiwa 2024 App
+
