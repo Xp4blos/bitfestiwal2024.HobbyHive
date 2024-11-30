@@ -11,7 +11,8 @@ export class FormComponent {
   categories: string[] = [];
   chosenCategories: number[] = [];
   categoryIterator: number = 15;
-
+  currentRadius: number = 1000;
+  radiusses: number[] = [500, 1000, 5000, 10000];
   constructor(private authFormService: AuthFormService) {}
 
   addCategory(): void {

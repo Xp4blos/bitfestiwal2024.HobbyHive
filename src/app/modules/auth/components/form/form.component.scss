@@ -25,6 +25,15 @@
     color: $text;
     font-family: "Varela", sans-serif;
   }
+  select {
+    color: $text;
+
+    border: solid 2px $text;
+  }
+  select:focus {
+    color: $text;
+    border: solid 2px $text;
+  }
 }
 .register-form-slides {
   background-color: $text;
@@ -32,4 +41,8 @@
 .register-form-submit {
   color: white;
   background-color: $text;
+}
+p {
+  color: $text;
+  font-family: "Varela", sans-serif;
 }
