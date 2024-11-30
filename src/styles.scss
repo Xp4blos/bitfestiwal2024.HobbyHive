@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Biryani:wght@200;300;400;600;700;800;900&family=Varela&display=swap");
+@import "vars";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.biryani-extralight {
+  font-family: "Biryani", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.biryani-light {
+  font-family: "Biryani", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.biryani-regular {
+  font-family: "Biryani", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.biryani-semibold {
+  font-family: "Biryani", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.biryani-bold {
+  font-family: "Biryani", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.biryani-extrabold {
+  font-family: "Biryani", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.biryani-black {
+  font-family: "Biryani", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.varela-regular {
+  font-family: "Varela", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
