@@ -1,1 +1,72 @@
-<p>form works!</p>
+@if(categoryIterator < 14){
+
+<div
+  class="register-form register-form-slides flex flex-col items-center py-32 text-center"
+>
+  <h2 class="varela-regular text-4xl">{{ currentCategory }}</h2>
+  <div class="imgs flex justify-center items-center flex-row m-16">
+    <img
+      src="img/form/{{ categoryIterator + 1 }}.1.png"
+      class="w-1/2 p-6"
+      alt=""
+    />
+    <img
+      src="img/form/{{ categoryIterator + 1 }}.2.png"
+      class="w-1/2 p-6"
+      alt=""
+    />
+  </div>
+  <div class="buttons flex flex-col justify-center items-center w-1/2">
+    <button
+      (click)="addCategory()"
+      class="add-btn shadow-md w-full my-1 rounded-full"
+    >
+      <img src="img/icons/check.png" class="w-12 mx-auto" alt="" />
+    </button>
+    <button
+      (click)="skipCategory()"
+      class="skip-btn shadow-md w-full my-1 rounded-full"
+    >
+      <img src="img/icons/cancel.png" class="w-12 mx-auto" alt="" />
+    </button>
+  </div>
+</div>
+} @else {
+<div class="register-form register-form-group p-16">
+  <div class="register-form form">
+    <form class="flex flex-col items-center">
+      <div>
+        <input
+          type="text"
+          class="w-full rounded-full p-1 px-3 my-1 shadow-md"
+          placeholder="Name"
+        />
+        <input
+          type="text"
+          class="w-full rounded-full p-1 px-3 my-1 shadow-md"
+          placeholder="Lastname"
+        />
+      </div>
+      <div class="my-10">
+        <input
+          type="email"
+          class="w-full rounded-full p-1 px-3 my-1 shadow-md"
+          placeholder="Email"
+        />
+        <input
+          type="password"
+          class="w-full rounded-full p-1 px-3 my-1 shadow-md"
+          placeholder="Password"
+        />
+      </div>
+      <app-map></app-map>
+      <button
+        type="submit"
+        class="register-form-submit p-3 rounded-full w-full text-xl"
+      >
+        Create Account
+      </button>
+    </form>
+  </div>
+</div>
+}

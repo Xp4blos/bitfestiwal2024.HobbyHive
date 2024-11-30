@@ -1,0 +1,35 @@
+@import "vars";
+
+.register-form {
+  min-height: 100vh;
+  height: 100%;
+  color: $background;
+}
+.add-btn {
+  background-color: $secondary;
+}
+.skip-btn {
+  background-color: $tertiary;
+}
+
+.register-form-group {
+  background-color: white;
+  input {
+    border: $primary 3px solid;
+  }
+  input:focus {
+    color: $text;
+    border-color: $text;
+  }
+  ::placeholder {
+    color: $text;
+    font-family: "Varela", sans-serif;
+  }
+}
+.register-form-slides {
+  background-color: $text;
+}
+.register-form-submit {
+  color: white;
+  background-color: $text;
+}

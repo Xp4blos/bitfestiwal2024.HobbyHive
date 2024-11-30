@@ -1,0 +1,14 @@
+@import "vars";
+.auth-page {
+  background-color: $background;
+  min-height: 100vh;
+  height: 100%;
+}
+.login-btn {
+  background-color: $primary;
+  color: white;
+}
+.register-btn {
+  background-color: $container;
+  color: $text;
+}
