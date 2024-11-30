@@ -59,10 +59,19 @@
           placeholder="Password"
         />
       </div>
-      <app-map></app-map>
+      <app-map [radius]="currentRadius"></app-map>
+      <div class="flex justify-center items-center p-2">
+        <p class="mx-3">Radius</p>
+        <select [(ngModel)]="currentRadius" class="rounded-xl" placego>
+          <option value="" selected disabled hidden>500</option>
+          <option *ngFor="let value of radiusses" [value]="value">
+            {{ value }} m
+          </option>
+        </select>
+      </div>
       <button
         type="submit"
-        class="register-form-submit p-3 rounded-full w-full text-xl"
+        class="register-form-submit p-3 px-36 my-14 rounded-full text-xl"
       >
         Create Account
       </button>
