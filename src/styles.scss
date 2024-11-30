@@ -9,7 +9,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+img {
+  max-width: 100%;
+}
 .biryani-extralight {
   font-family: "Biryani", sans-serif;
   font-weight: 200;
@@ -56,4 +58,8 @@
   font-family: "Varela", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+.text-text {
+  color: $text;
 }
