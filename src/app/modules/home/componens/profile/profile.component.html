@@ -1,0 +1,31 @@
+
+<!-- <p>main works!</p> -->
+<div class="main w-screen">
+    <div class="div p-4">
+        <p>Profile info</p>
+    </div>
+    <div class="div text-base p-2">
+        {{userData.name}}
+        {{userData.surname}}
+    </div>
+    <div class="div text-base p-2">
+        {{userData.email}}
+    </div>
+    <br>
+    <div class="div">
+        Category list
+        <p class="text-sm" *ngFor="let cl of userData.category"> {{cl.name}}</p>
+    </div>
+    <div class="div">
+       Tag list
+       <p class="text-sm" *ngFor="let t of userData.tag">{{t}}</p>
+    </div>
+    <div class="div">
+        Activites
+        <p class="text-sm" *ngFor="let a of userData.activities">{{a.title}}</p>
+    </div>
+    <br>
+
+    
+ </div>
+ 

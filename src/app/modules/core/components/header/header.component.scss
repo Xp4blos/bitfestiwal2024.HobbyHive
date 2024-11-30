@@ -1,0 +1,35 @@
+@import "vars";
+.navbar {
+    display: flex;
+    justify-content: center; /* Wyśrodkowanie nawigacji */
+    align-items: center;
+    background-color: $primary; /* Kolor tła nawigacji */
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  
+    .navbar-links {
+      display: flex;
+      list-style: none;
+      gap: 2rem; /* Odstępy między linkami */
+      margin: 0;
+      padding: 0;
+  
+      li {
+        a {
+          text-decoration: none;
+          color: #fff; /* Kolor linków */
+          font-size: 1.2rem;
+          font-weight: 500;
+          transition: color 0.3s, border-bottom 0.3s;
+  
+          &:hover {
+            color: $text; /* Kolor linku przy hover */
+          }
+  
+          &.active {
+            color:  $text; /* Kolor aktywnego linku */
+          }
+        }
+      }
+    }
+  }
