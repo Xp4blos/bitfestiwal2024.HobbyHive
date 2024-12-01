@@ -9,4 +9,4 @@ System sugeruje wydarzenia na podstawie preferencji innych uczestników danego w
 <br>
 
 **Repozytorium Backend** <br>
-[Repozytorium backend](http://www.pawelorlik.pl](https://github.com/OlivierMiracle/HobbyHive)
+[Repozytorium backend](https://github.com/OlivierMiracle/HobbyHive)
