@@ -12,13 +12,16 @@ export class ActivitesService {
     constructor(private http: HttpClient){
         
     }
-
+    //panel.sebastiankura.com:25583/swagger
 
     getActivites(): Observable<Activity[]>{
-        const body = {}
-        return this.http.post<Activity[]>('',body).pipe(
+        const body = {
+            "longitude": 0.0,
+            "latitude": 0.0,
+            "radius": 100000
+          }
+        return this.http.post<Activity[]>('http://panel.sebastiankura.com:25583/get-activities', body).pipe(
             tap(activites => {
-                // this.recipeService.setRecipes(recipes);
                 this.activitesChanged.next(activites);
               })
         );
