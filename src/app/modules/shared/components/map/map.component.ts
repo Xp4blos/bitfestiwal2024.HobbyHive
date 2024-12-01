@@ -6,7 +6,7 @@ import { SimpleChanges } from '@angular/core';
   templateUrl: './map.component.html',
   styleUrl: './map.component.scss',
 })
-export class MapComponent implements AfterViewInit {
+export class MapComponent implements OnInit {
   @Input() radius!: number;
   private map!: Map;
   private circle!: L.Circle | null;
@@ -57,7 +57,7 @@ export class MapComponent implements AfterViewInit {
       this.updateCircleRadius();
     }
   }
-  ngAfterViewInit(): void {
+  ngOnInit(): void {
     this.initMap();
   }
 }

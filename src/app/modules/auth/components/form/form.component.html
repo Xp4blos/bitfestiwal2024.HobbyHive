@@ -69,6 +69,34 @@
           </option>
         </select>
       </div>
+      <div class="tags w-86">
+        <div class="taglist py-4 flex flex-wrap">
+          @for(tag of userTags; track tag) {
+          <p
+            class="tag bg-gray-200 px-3 py-1 gap-2 rounded-full cursor-pointer hover:bg-gray-300"
+            (click)="deleteTag(tag)"
+          >
+            {{ tag }} ×
+          </p>
+          }
+        </div>
+        <div class="flex w-full flex-col">
+          <input
+            class="tag-input w-96 mx-auto rounded-full p-1 px-3 my-1 shadow-md"
+            type="text"
+            [(ngModel)]="newTag"
+            [ngModelOptions]="{ standalone: true }"
+            name="newTag"
+            placeholder="Tag"
+          />
+          <button
+            (click)="addTag()"
+            class="tag-button rounded-full w-96 mx-auto shadow text-xl p-1 my-1"
+          >
+            +
+          </button>
+        </div>
+      </div>
       <button
         type="submit"
         class="register-form-submit p-3 px-36 my-14 rounded-full text-xl"

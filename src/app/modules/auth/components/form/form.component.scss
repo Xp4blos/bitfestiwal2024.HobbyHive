@@ -28,11 +28,11 @@
   select {
     color: $text;
 
-    border: solid 2px $text;
+    border: solid 2px $primary;
   }
   select:focus {
     color: $text;
-    border: solid 2px $text;
+    border: solid 2px $primary;
   }
 }
 .register-form-slides {
@@ -45,4 +45,14 @@
 p {
   color: $text;
   font-family: "Varela", sans-serif;
+}
+.tag-button {
+  color: $text;
+  background-color: $primary;
+}
+.tag {
+  color: $text;
+}
+.tag-input {
+  color: $text;
 }
