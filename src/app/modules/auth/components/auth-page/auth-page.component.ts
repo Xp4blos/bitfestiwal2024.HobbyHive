@@ -8,6 +8,10 @@ import { Router } from '@angular/router';
 export class AuthPageComponent {
   constructor(private router: Router) {}
 
+  loginNavigate(): void {
+    this.router.navigate(['app/main']);
+  }
+
   registerNavigate(): void {
     this.router.navigate(['auth/form']);
   }
