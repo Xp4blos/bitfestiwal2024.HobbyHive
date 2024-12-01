@@ -17,17 +17,17 @@
       li {
         a {
           text-decoration: none;
-          color: #fff; /* Kolor linków */
+          color: $text; /* Kolor linków */
           font-size: 1.2rem;
           font-weight: 500;
           transition: color 0.3s, border-bottom 0.3s;
   
           &:hover {
-            color: $text; /* Kolor linku przy hover */
+            color: #fff; /* Kolor linku przy hover */
           }
   
           &.active {
-            color:  $text; /* Kolor aktywnego linku */
+            color:  #fff; /* Kolor aktywnego linku */
           }
         }
       }

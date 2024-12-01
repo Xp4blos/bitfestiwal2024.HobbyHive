@@ -10,3 +10,109 @@
     flex-direction: column;
     margin-bottom: 60px;
 }
+
+
+//category
+.category-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background-color: $primary; /* Jasne tło dla kontenera */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+// activites
+.activities-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background-color: $background; /* Jasne tło dla kontenera */
+    // border-radius: 10px;
+    // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .activity-card {
+    width: 100%;
+    max-width: 400px;
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: $container; /* Tło dla karty */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+    &:hover {
+      transform: translateY(-5px); /* Subtelne uniesienie na hover */
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+  
+    .activity-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #333; /* Kolor nagłówka */
+      margin-bottom: 0.5rem;
+    }
+  
+    .activity-description {
+      font-size: 1rem;
+      color: #666; /* Kolor opisu */
+      margin-bottom: 0.5rem;
+    }
+  
+    .activity-category {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #888; /* Kolor kategorii */
+    }
+  }
+
+  //tags
+
+  .tag-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  
+    h2 {
+      font-size: 1.5rem;
+      color: #333; /* Kolor nagłówka */
+      margin-bottom: 0.5rem;
+    }
+  
+    .tags {
+      display: flex;
+      flex-wrap: wrap; /* Pozwala tagom zawijać się w nową linię */
+      gap: 0.5rem; /* Odstęp między tagami */
+    }
+  
+    .tag {
+      display: inline-block;
+      padding: 0.4rem 0.8rem; /* Wewnątrz tagu */
+      background-color: $secondary; /* Tło tagu */
+      color: #333; /* Kolor tekstu */
+      font-size: 0.9rem;
+      font-weight: 500;
+      border-radius: 20px; /* Zaokrąglone rogi */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtelny cień */
+      cursor: pointer; /* Wskazanie, że można kliknąć */
+      transition: background-color 0.3s ease, transform 0.2s ease;
+  
+      &:hover {
+        background-color: #f39c12; /* Kolor na hover */
+        color: #fff; /* Zmiana koloru tekstu na hover */
+        transform: translateY(-2px); /* Subtelne uniesienie */
+      }
+  
+      &:active {
+        background-color: #d35400; /* Kolor przy kliknięciu */
+        transform: translateY(0); /* Powrót do pozycji */
+      }
+    }
+  }
