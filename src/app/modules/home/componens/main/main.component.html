@@ -1,48 +1,47 @@
 <!-- <p>main works!</p> -->
-<div class="main w-screen ">
-   <div
-     class="cart w-full h-full"
-     (swipe)="onSwipe($event)"
-     [@swipeAnimation]="animationState"
-     *ngIf="!isEmpty"
-   >
-   <div class="div p-2">
+<div class="main w-screen">
+  <div
+    class="cart w-full h-full py-16"
+    (swipe)="onSwipe($event)"
+    [@swipeAnimation]="animationState"
+    *ngIf="!isEmpty"
+  >
+    <div class="div p-2 varela-regular">
       {{ activity.title }}
-   </div>
-   <div class="div text-sm">
-      {{ activity.category }}
-   </div>
-   <div class="div m-4">
-      <img [src]="activity.imageUrl" alt="not found" class="w-full h-full rounded-lg">
-   </div>
-   <div class="div text-base p-2">
-      {{activity.description}}
-   </div>
-   <div class="date-container">
-      <span class="date-range">
-        30.11.2024 - 15.12.2024
-      </span>
     </div>
-    <button (click)="onClick()">{{showAddres?'Hide Addres': 'Show Addres'}}</button>
-    <app-pin-map 
-    [lat]="50.04343"
-    [lng]="60.00943"
-    *ngIf="showAddres"
-    
+    <div class="div text-sm biryani-regular">
+      {{ activity.category }}
+    </div>
+    <div class="div m-4 px-12">
+      <img
+        [src]="activity.imageUrl"
+        alt="not found"
+        class="w-full h-full rounded-lg"
+      />
+    </div>
+    <div class="div text-base p-2">
+      {{ activity.description }}
+    </div>
+    <div class="flex justify-center items-center flex-wrap">
+      <div class="date-container m-2">
+        <span class="date-range"> 30.11.2024 - 15.12.2024 </span>
+      </div>
+      <div>
+        <button (click)="onClick()" class="m-2">
+          {{ showAddres ? "Hide Addres" : "Show Addres" }}
+        </button>
+      </div>
+    </div>
+    <app-pin-map
+      [lat]="50.2999988"
+      [lng]="18.7833302"
+      *ngIf="showAddres"
     ></app-pin-map>
-    <br>
-    <br>
+    <br />
+    <br />
+  </div>
 
-   </div>
-
-   <div
-   class="empty-cart w-full h-full"
-   *ngIf="isEmpty"
-   >
-   There are no more activities in your area
-   </div>
-
-
-   
-
+  <div class="empty-cart w-full h-full" *ngIf="isEmpty">
+    There are no more activities in your area
+  </div>
 </div>

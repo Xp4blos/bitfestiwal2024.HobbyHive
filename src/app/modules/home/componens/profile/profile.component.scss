@@ -1,161 +1,158 @@
 @import "vars";
 .main {
-    background-color: $background;
-    min-height: 100vh;
-    height: 100%;  
-    font-size: 1.5rem;
-    font-family: "Varela", sans-serif;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: 60px;
+  background-color: $background;
+  min-height: 100vh;
+  height: 100%;
+  font-size: 1.5rem;
+  font-family: "Varela", sans-serif;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 60px;
 }
 
-
+.personal-data-container {
+  background-color: $tertiary;
+}
 //category
-.category-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    background-color: $primary; /* Jasne tło dla kontenera */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.category-container {
+  padding: 1rem;
+  background-color: $primary; /* Jasne tło dla kontenera */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
 
 // activites
 .activities-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    background-color: $background; /* Jasne tło dla kontenera */
-    // border-radius: 10px;
-    // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background-color: $background; /* Jasne tło dla kontenera */
+  // border-radius: 10px;
+  // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.activity-card {
+  width: 100%;
+  max-width: 400px;
+  margin: 1rem 0;
+  padding: 1rem;
+  background-color: $container; /* Tło dla karty */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px); /* Subtelne uniesienie na hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   }
-  
-  .activity-card {
-    width: 100%;
-    max-width: 400px;
-    margin: 1rem 0;
-    padding: 1rem;
-    background-color: $container; /* Tło dla karty */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  
+
+  .activity-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333; /* Kolor nagłówka */
+    margin-bottom: 0.5rem;
+  }
+
+  .activity-description {
+    font-size: 1rem;
+    color: #666; /* Kolor opisu */
+    margin-bottom: 0.5rem;
+  }
+
+  .activity-category {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #888; /* Kolor kategorii */
+  }
+}
+
+//tags
+
+.tag-container {
+  background-color: $container;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem;
+
+  h2 {
+    font-size: 1.5rem;
+    color: #333; /* Kolor nagłówka */
+    margin-bottom: 0.5rem;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap; /* Pozwala tagom zawijać się w nową linię */
+    gap: 0.5rem; /* Odstęp między tagami */
+  }
+
+  .tag {
+    display: inline-block;
+    padding: 0.4rem 0.8rem; /* Wewnątrz tagu */
+    background-color: $secondary; /* Tło tagu */
+    color: #333; /* Kolor tekstu */
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 20px; /* Zaokrąglone rogi */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtelny cień */
+    cursor: pointer; /* Wskazanie, że można kliknąć */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
     &:hover {
-      transform: translateY(-5px); /* Subtelne uniesienie na hover */
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      background-color: #f39c12; /* Kolor na hover */
+      color: #fff; /* Zmiana koloru tekstu na hover */
+      transform: translateY(-2px); /* Subtelne uniesienie */
     }
-  
-    .activity-title {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #333; /* Kolor nagłówka */
-      margin-bottom: 0.5rem;
-    }
-  
-    .activity-description {
-      font-size: 1rem;
-      color: #666; /* Kolor opisu */
-      margin-bottom: 0.5rem;
-    }
-  
-    .activity-category {
-      font-size: 0.9rem;
-      font-weight: 500;
-      color: #888; /* Kolor kategorii */
+
+    &:active {
+      background-color: #d35400; /* Kolor przy kliknięciu */
+      transform: translateY(0); /* Powrót do pozycji */
     }
   }
+}
 
-  //tags
-
-  .tag-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem;
-  
-    h2 {
-      font-size: 1.5rem;
-      color: #333; /* Kolor nagłówka */
-      margin-bottom: 0.5rem;
-    }
-  
-    .tags {
-      display: flex;
-      flex-wrap: wrap; /* Pozwala tagom zawijać się w nową linię */
-      gap: 0.5rem; /* Odstęp między tagami */
-    }
-  
-    .tag {
-      display: inline-block;
-      padding: 0.4rem 0.8rem; /* Wewnątrz tagu */
-      background-color: $secondary; /* Tło tagu */
-      color: #333; /* Kolor tekstu */
-      font-size: 0.9rem;
-      font-weight: 500;
-      border-radius: 20px; /* Zaokrąglone rogi */
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtelny cień */
-      cursor: pointer; /* Wskazanie, że można kliknąć */
-      transition: background-color 0.3s ease, transform 0.2s ease;
-  
-      &:hover {
-        background-color: #f39c12; /* Kolor na hover */
-        color: #fff; /* Zmiana koloru tekstu na hover */
-        transform: translateY(-2px); /* Subtelne uniesienie */
-      }
-  
-      &:active {
-        background-color: #d35400; /* Kolor przy kliknięciu */
-        transform: translateY(0); /* Powrót do pozycji */
-      }
-    }
-  }
-
-  
-  /* Dla małych ekranów */
+/* Dla małych ekranów */
 @media (max-width: 600px) {
-    .activities-navbar {
-      button {
-        font-size: 0.9rem;
-        padding: 8px;
-        flex: 1 1 45%; /* Mniejsze przyciski */
-      }
-    }
-  
-    .activity-card {
-      font-size: 0.8rem;
-    }
-  }
-
   .activities-navbar {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin: 1rem 0;
-
     button {
-      background: none;
-      border: none;
-      font-size: 1rem;
-      color: #666;
-      cursor: pointer;
-      padding: 0.5rem 1rem;
-
-      &:hover {
-        color: #333;
-      }
-
-      &.active {
-        color: $text;
-        font-weight: bold;
-        text-decoration: underline;
-      }
+      font-size: 0.9rem;
+      padding: 8px;
+      flex: 1 1 45%; /* Mniejsze przyciski */
     }
   }
 
+  .activity-card {
+    font-size: 0.8rem;
+  }
+}
+
+.activities-navbar {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+
+  button {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    color: #666;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+
+    &:hover {
+      color: #333;
+    }
+
+    &.active {
+      color: $text;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+  }
+}
