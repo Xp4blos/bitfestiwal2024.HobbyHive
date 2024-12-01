@@ -4,6 +4,7 @@
      class="cart w-full h-full"
      (swipe)="onSwipe($event)"
      [@swipeAnimation]="animationState"
+     *ngIf="!isEmpty"
    >
    <div class="div p-2">
       {{ activity.title }}
@@ -12,16 +13,30 @@
       {{ activity.category }}
    </div>
    <div class="div m-4">
-      <img [src]="activity.imageUrl" alt="not found" class="w-full h-full">
+      <img [src]="activity.imageUrl" alt="not found" class="w-full h-full rounded-lg">
    </div>
-   <div class="div text-base p-3">
+   <div class="div text-base p-2">
       {{activity.description}}
    </div>
-   <div class="div">
-      <button 
-      class="button" 
-      (click)="onClick()">Activity location</button>
-   </div>
+   <div class="date-container">
+      <span class="date-range">
+        30.11.2024 - 15.12.2024
+      </span>
+    </div>
+    <!-- <div class="div p-3">
+       Addres
+    </div> -->
 
    </div>
+
+   <div
+   class="empty-cart w-full h-full"
+   *ngIf="isEmpty"
+   >
+   There are no more activities in your area
+   </div>
+
+
+   
+
 </div>

@@ -17,7 +17,54 @@
     position: relative;
     transition: transform 0.5s ease, opacity 0.5s ease, background-color 0.3s ease;
 
+
+}
+
+//empty cart
+.empty-cart {
+    background-color: $background;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    height: 100%;
+    font-size: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    transition: transform 0.5s ease, opacity 0.5s ease, background-color 0.3s ease; 
 }
 
 
 
+//date 
+.date-container {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: $secondary; /* Delikatny niebieski */
+    color: #333; /* Ciemny tekst */
+    font-size: 1rem;
+    font-weight: 500;
+    border: 1px solid #dcdcdc; /* Jasna ramka */
+    border-radius: 8px; /* Zaokrąglone rogi */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtelny cień */
+    text-align: center;
+    white-space: nowrap; /* Zapobiega łamaniu tekstu */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .date-range {
+    color: $text; /* Wyróżnij tekst daty kolorem */
+    font-weight: bold;
+  }
+
+  @media (min-width: 768px) { // Warunek dla przeglądarek (desktopów)
+    .cart img {
+      max-width: 500px; // Maksymalna szerokość obrazu
+      max-height: 300px; // Maksymalna wysokość obrazu
+      object-fit: cover; // Dopasowanie obrazu w granicach
+      //margin: 0 auto; // Wyśrodkowanie obrazu
+      //border-radius: 10px; // Opcjonalne zaokrąglenie
+    }
+  }
