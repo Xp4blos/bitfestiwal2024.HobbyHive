@@ -23,9 +23,15 @@
         30.11.2024 - 15.12.2024
       </span>
     </div>
-    <!-- <div class="div p-3">
-       Addres
-    </div> -->
+    <button (click)="onClick()">{{showAddres?'Hide Addres': 'Show Addres'}}</button>
+    <app-pin-map 
+    [lat]="50.04343"
+    [lng]="60.00943"
+    *ngIf="showAddres"
+    
+    ></app-pin-map>
+    <br>
+    <br>
 
    </div>
 

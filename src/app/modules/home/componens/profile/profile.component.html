@@ -23,16 +23,57 @@
           <span class="tag" *ngFor="let t of userData.tag">{{ t }}</span>
         </div>
       </div>
-    <div class="activities-container">
-        <h2>Activities</h2>
-        <div *ngFor="let a of userData.activities" class="activity-card">
+        <br>
+      <h2>Activities</h2>
+        <!-- Navbar -->
+  <div class="activities-navbar">
+    <button 
+      (click)="setActiveTab('upcoming')" 
+      [class.active]="activeTab === 'upcoming'">
+      Upcoming
+    </button>
+    <button 
+      (click)="setActiveTab('current')" 
+      [class.active]="activeTab === 'current'">
+      Current
+    </button>
+    <button 
+      (click)="setActiveTab('finished')" 
+      [class.active]="activeTab === 'finished'">
+      Finished
+    </button>
+  </div>
+
+
+  
+    <div class="activities-container" *ngIf="activeTab === 'upcoming'">
+        <div *ngFor="let a of upcommingActivity" class="activity-card">
           <p class="activity-title">{{ a.title }}</p>
           <p class="activity-category">{{ a.category }}</p>
           <p class="activity-description">{{ a.description }}</p>
         </div>
       </div>
-    <br>
 
+    <div class="activities-container" *ngIf="activeTab === 'current'">
+        <!-- <h2>Activities</h2> -->
+        <div *ngFor="let a of currentActivity" class="activity-card">
+          <p class="activity-title">{{ a.title }}</p>
+          <p class="activity-category">{{ a.category }}</p>
+          <p class="activity-description">{{ a.description }}</p>
+        </div>
+      </div>
+
+    <div class="activities-container" *ngIf="activeTab === 'finished'">
+        <!-- <h2>Activities</h2> -->
+        <div *ngFor="let a of finishedActivity" class="activity-card">
+          <p class="activity-title">{{ a.title }}</p>
+          <p class="activity-category">{{ a.category }}</p>
+          <p class="activity-description">{{ a.description }}</p>
+        </div>
+      </div>
+
+    <br>
+   
     
  </div>
  

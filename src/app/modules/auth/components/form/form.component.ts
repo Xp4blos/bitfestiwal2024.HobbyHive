@@ -47,4 +47,8 @@ export class FormComponent {
     this.categories = this.authFormService.getCategories;
     this.currentCategory = this.categories[this.categoryIterator];
   }
+
+  onRadiusChange(value: number): void {
+    console.log('Current radius changed:', value);
+  }
 }
