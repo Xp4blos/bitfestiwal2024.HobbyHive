@@ -4,7 +4,7 @@
     min-height: 100vh;
     height: 100%;  
     font-size: 1.5rem;
-
+    font-family: "Varela", sans-serif;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -116,3 +116,46 @@
       }
     }
   }
+
+  
+  /* Dla małych ekranów */
+@media (max-width: 600px) {
+    .activities-navbar {
+      button {
+        font-size: 0.9rem;
+        padding: 8px;
+        flex: 1 1 45%; /* Mniejsze przyciski */
+      }
+    }
+  
+    .activity-card {
+      font-size: 0.8rem;
+    }
+  }
+
+  .activities-navbar {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+
+    button {
+      background: none;
+      border: none;
+      font-size: 1rem;
+      color: #666;
+      cursor: pointer;
+      padding: 0.5rem 1rem;
+
+      &:hover {
+        color: #333;
+      }
+
+      &.active {
+        color: $text;
+        font-weight: bold;
+        text-decoration: underline;
+      }
+    }
+  }
+

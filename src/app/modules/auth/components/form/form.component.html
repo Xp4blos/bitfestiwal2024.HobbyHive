@@ -62,8 +62,7 @@
       <app-map [radius]="currentRadius"></app-map>
       <div class="flex justify-center items-center p-2">
         <p class="mx-3">Radius</p>
-        <select [(ngModel)]="currentRadius" class="rounded-xl" placego>
-          <option value="" selected disabled hidden>500</option>
+        <select [(ngModel)]="currentRadius" [ngModelOptions]="{standalone: true}" class="rounded-xl">
           <option *ngFor="let value of radiusses" [value]="value">
             {{ value }} m
           </option>
