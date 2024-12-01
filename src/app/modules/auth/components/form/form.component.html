@@ -34,17 +34,23 @@
 } @else {
 <div class="register-form register-form-group p-16">
   <div class="register-form form">
-    <form class="flex flex-col items-center">
+    <form
+      class="flex flex-col items-center"
+      [formGroup]="registerForm"
+      (ngSubmit)="onRegister()"
+    >
       <div>
         <input
           type="text"
           class="w-full rounded-full p-1 px-3 my-1 shadow-md"
           placeholder="Name"
+          formControlName="name"
         />
         <input
           type="text"
           class="w-full rounded-full p-1 px-3 my-1 shadow-md"
           placeholder="Lastname"
+          formControlName="lastname"
         />
       </div>
       <div class="my-10">
@@ -52,11 +58,13 @@
           type="email"
           class="w-full rounded-full p-1 px-3 my-1 shadow-md"
           placeholder="Email"
+          formControlName="email"
         />
         <input
           type="password"
           class="w-full rounded-full p-1 px-3 my-1 shadow-md"
           placeholder="Password"
+          formControlName="password"
         />
       </div>
       <app-map [radius]="currentRadius"></app-map>
@@ -90,6 +98,7 @@
             placeholder="Tag"
           />
           <button
+            type="button"
             (click)="addTag()"
             class="tag-button rounded-full w-96 mx-auto shadow text-xl p-1 my-1"
           >

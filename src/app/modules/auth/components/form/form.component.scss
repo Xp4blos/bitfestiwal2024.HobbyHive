@@ -16,6 +16,7 @@
   background-color: white;
   input {
     border: $primary 3px solid;
+    color: $text;
   }
   input:focus {
     color: $text;
