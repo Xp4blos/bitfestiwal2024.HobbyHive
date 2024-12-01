@@ -5,6 +5,7 @@ import { FormComponent } from './components/form/form.component';
 import { AuthPageComponent } from './components/auth-page/auth-page.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: 'auth', pathMatch: 'full' },
   {
     path: 'auth',
     component: AuthComponent,

@@ -70,7 +70,11 @@
       <app-map [radius]="currentRadius"></app-map>
       <div class="flex justify-center items-center p-2">
         <p class="mx-3">Radius</p>
-        <select [(ngModel)]="currentRadius" [ngModelOptions]="{standalone: true}" class="rounded-xl">
+        <select
+          [(ngModel)]="currentRadius"
+          [ngModelOptions]="{ standalone: true }"
+          class="rounded-xl"
+        >
           <option *ngFor="let value of radiusses" [value]="value">
             {{ value }} m
           </option>
@@ -80,7 +84,7 @@
         <div class="taglist py-4 flex flex-wrap">
           @for(tag of userTags; track tag) {
           <p
-            class="tag bg-gray-200 px-3 py-1 gap-2 rounded-full cursor-pointer hover:bg-gray-300"
+            class="tag bg-gray-200 px-3 py-1 gap-2 mx-1 rounded-full cursor-pointer hover:bg-gray-300"
             (click)="deleteTag(tag)"
           >
             {{ tag }} ×

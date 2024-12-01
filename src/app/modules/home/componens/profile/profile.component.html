@@ -1,79 +1,88 @@
-
 <!-- <p>main works!</p> -->
 <div class="main w-screen">
-    <div class="div p-4">
-        <p>Profile info</p>
+  <div class="div p-4 my-4">
+    <p>User profile</p>
+  </div>
+  <div class="personal-data-container rounded-2xl shadow p-2">
+    <div class="div p-2 biryani-regular text-lg flex">
+      <p class="mr-3">Name:</p>
+      {{ userData.name }}
+      {{ userData.surname }}
     </div>
-    <div class="div p-2">
-        {{userData.name}}
-        {{userData.surname}}
+    <div class="div p-2 text-lg flex">
+      <p class="mr-3">Surname:</p>
+      {{ userData.email }}
     </div>
-    <div class="div p-2">
-        {{userData.email}}
+  </div>
+  <br />
+  <div class="flex">
+    <div class="category-container shadow m-4">
+      <h2 class="p-2 varela-regular">Category list</h2>
+      <p class="text-sm biryani-regular" *ngFor="let cl of userData.category">
+        {{ cl.name }}
+      </p>
     </div>
-    <br>
-    <h2 class="p-4">Category list</h2>
-    <div class="category-container">
-        <p class="text-sm" *ngFor="let cl of userData.category"> {{cl.name}}</p>
-    </div>
-    <br>
-    <h2>Tags</h2>
-    <div class="tag-container">
-        <div class="tags">
-          <span class="tag" *ngFor="let t of userData.tag">{{ t }}</span>
-        </div>
+    <br />
+    <div
+      class="tag-container flex justify-start shadow items-center rounded-2xl p-2 m-4"
+    >
+      <h2 class="varela-regular">Tags</h2>
+      <div class="tags">
+        <span class="tag biryani-regular" *ngFor="let t of userData.tag">{{
+          t
+        }}</span>
       </div>
-        <br>
-      <h2>Activities</h2>
-        <!-- Navbar -->
+    </div>
+  </div>
+  <br />
+  <h2>Activities</h2>
+  <!-- Navbar -->
   <div class="activities-navbar">
-    <button 
-      (click)="setActiveTab('upcoming')" 
-      [class.active]="activeTab === 'upcoming'">
+    <button
+      (click)="setActiveTab('upcoming')"
+      [class.active]="activeTab === 'upcoming'"
+    >
       Upcoming
     </button>
-    <button 
-      (click)="setActiveTab('current')" 
-      [class.active]="activeTab === 'current'">
+    <button
+      (click)="setActiveTab('current')"
+      [class.active]="activeTab === 'current'"
+    >
       Current
     </button>
-    <button 
-      (click)="setActiveTab('finished')" 
-      [class.active]="activeTab === 'finished'">
+    <button
+      (click)="setActiveTab('finished')"
+      [class.active]="activeTab === 'finished'"
+    >
       Finished
     </button>
   </div>
 
+  <div class="activities-container" *ngIf="activeTab === 'upcoming'">
+    <div *ngFor="let a of upcommingActivity" class="activity-card">
+      <p class="activity-title">{{ a.title }}</p>
+      <p class="activity-category">{{ a.category }}</p>
+      <p class="activity-description">{{ a.description }}</p>
+    </div>
+  </div>
 
-  
-    <div class="activities-container" *ngIf="activeTab === 'upcoming'">
-        <div *ngFor="let a of upcommingActivity" class="activity-card">
-          <p class="activity-title">{{ a.title }}</p>
-          <p class="activity-category">{{ a.category }}</p>
-          <p class="activity-description">{{ a.description }}</p>
-        </div>
-      </div>
+  <div class="activities-container" *ngIf="activeTab === 'current'">
+    <!-- <h2>Activities</h2> -->
+    <div *ngFor="let a of currentActivity" class="activity-card">
+      <p class="activity-title">{{ a.title }}</p>
+      <p class="activity-category">{{ a.category }}</p>
+      <p class="activity-description">{{ a.description }}</p>
+    </div>
+  </div>
 
-    <div class="activities-container" *ngIf="activeTab === 'current'">
-        <!-- <h2>Activities</h2> -->
-        <div *ngFor="let a of currentActivity" class="activity-card">
-          <p class="activity-title">{{ a.title }}</p>
-          <p class="activity-category">{{ a.category }}</p>
-          <p class="activity-description">{{ a.description }}</p>
-        </div>
-      </div>
+  <div class="activities-container" *ngIf="activeTab === 'finished'">
+    <!-- <h2>Activities</h2> -->
+    <div *ngFor="let a of finishedActivity" class="activity-card">
+      <p class="activity-title">{{ a.title }}</p>
+      <p class="activity-category">{{ a.category }}</p>
+      <p class="activity-description">{{ a.description }}</p>
+    </div>
+  </div>
 
-    <div class="activities-container" *ngIf="activeTab === 'finished'">
-        <!-- <h2>Activities</h2> -->
-        <div *ngFor="let a of finishedActivity" class="activity-card">
-          <p class="activity-title">{{ a.title }}</p>
-          <p class="activity-category">{{ a.category }}</p>
-          <p class="activity-description">{{ a.description }}</p>
-        </div>
-      </div>
-
-    <br>
-   
-    
- </div>
- 
+  <br />
+</div>

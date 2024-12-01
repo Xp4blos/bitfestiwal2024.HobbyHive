@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthFormService } from '../../../core/services/auth-form.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { RegisterService } from '../../../core/services/register.service';
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
@@ -21,7 +23,11 @@ export class FormComponent {
     password: new FormControl('', [Validators.required]),
     email: new FormControl('', [Validators.required, Validators.email]),
   });
-  constructor(private authFormService: AuthFormService) {}
+  constructor(
+    private authFormService: AuthFormService,
+    private router: Router,
+    private registerService: RegisterService
+  ) {}
 
   addCategory(): void {
     //skipping hobby categories
@@ -56,7 +62,21 @@ export class FormComponent {
   onRegister() {
     //adding user
     console.log(this.registerForm.getRawValue(), this.chosenCategories);
-    this.userTags;
+
+    this.registerService
+      .addUser(
+        this.registerForm.controls.name.value!,
+        this.registerForm.controls.lastname.value!,
+        this.registerForm.controls.email.value!,
+        this.userTags,
+        this.chosenCategories
+      )
+      .subscribe({
+        next: (response) => {
+          console.log(response);
+        },
+      });
+    this.router.navigate(['app/main']);
   }
   ngOnInit(): void {
     this.categories = this.authFormService.getCategories;

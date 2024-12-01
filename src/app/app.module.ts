@@ -10,6 +10,7 @@ import { AuthModule } from './modules/auth/auth.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http'; // Import modułu
+import { provideHttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,11 +23,9 @@ import { HttpClientModule } from '@angular/common/http'; // Import modułu
     UserModule,
     AuthModule,
     HammerModule,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule // Dodaj tutaj
+    HttpClientModule, // Dodaj tutaj
   ],
-  providers: [],
+  providers: [provideHttpClient()],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

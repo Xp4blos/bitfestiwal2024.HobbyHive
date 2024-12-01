@@ -1,98 +1,89 @@
 @import "vars";
 .main {
-    background-color: $background;
-    
-    
+  background-color: $background;
 }
 .cart {
-    background-color: $background;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    min-height: 100vh;
-    height: 100%;
-    font-size: 1.5rem;
-    font-family: "Varela", sans-serif;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: relative;
-    transition: transform 0.5s ease, opacity 0.5s ease, background-color 0.3s ease;
-
-
+  background-color: $background;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  height: 100%;
+  font-size: 1.5rem;
+  font-family: "Varela", sans-serif;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  transition: transform 0.5s ease, opacity 0.5s ease, background-color 0.3s ease;
 }
 
 //empty cart
 .empty-cart {
-    background-color: $background;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    min-height: 100vh;
-    height: 100%;
-    font-size: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: relative;
-    transition: transform 0.5s ease, opacity 0.5s ease, background-color 0.3s ease; 
+  background-color: $background;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  height: 100%;
+  font-size: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  transition: transform 0.5s ease, opacity 0.5s ease, background-color 0.3s ease;
 }
 
-
-
-//date 
+//date
 .date-container {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background-color: $secondary; /* Delikatny niebieski */
-    color: #333; /* Ciemny tekst */
-    font-size: 1rem;
-    font-weight: 500;
-    border: 1px solid #dcdcdc; /* Jasna ramka */
-    border-radius: 8px; /* Zaokrąglone rogi */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtelny cień */
-    text-align: center;
-    white-space: nowrap; /* Zapobiega łamaniu tekstu */
-    transition: transform 0.3s ease, background-color 0.3s ease;
-  }
-  
-  .date-range {
-    color: $text; /* Wyróżnij tekst daty kolorem */
-    font-weight: bold;
-  }
+  padding: 0.5rem 1rem;
+  background-color: $secondary; /* Delikatny niebieski */
+  color: #333; /* Ciemny tekst */
+  font-size: 1rem;
+  font-weight: 500;
+  border: 1px solid #dcdcdc; /* Jasna ramka */
+  border-radius: 8px; /* Zaokrąglone rogi */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtelny cień */
+  text-align: center;
+  white-space: nowrap; /* Zapobiega łamaniu tekstu */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
 
-  @media (min-width: 768px) { // Warunek dla przeglądarek (desktopów)
-    .cart img {
-      max-width: 500px; // Maksymalna szerokość obrazu
-      max-height: 300px; // Maksymalna wysokość obrazu
-      object-fit: cover; // Dopasowanie obrazu w granicach
-      //margin: 0 auto; // Wyśrodkowanie obrazu
-      //border-radius: 10px; // Opcjonalne zaokrąglenie
-    }
-  }
+.date-range {
+  color: $text; /* Wyróżnij tekst daty kolorem */
+  font-weight: bold;
+}
 
+@media (min-width: 768px) {
+  // Warunek dla przeglądarek (desktopów)
+  .cart img {
+    max-width: 500px; // Maksymalna szerokość obrazu
+    max-height: 300px; // Maksymalna wysokość obrazu
+    object-fit: cover; // Dopasowanie obrazu w granicach
+    //margin: 0 auto; // Wyśrodkowanie obrazu
+    //border-radius: 10px; // Opcjonalne zaokrąglenie
+  }
+}
 
-  button {
-    margin-top: 25px;
-    background-color:$tertiary; /* Niebieski kolor */
-    color: #fff; /* Biały tekst */
-    border: none; /* Usuń domyślną ramkę */
-    border-radius: 8px; /* Zaokrąglone rogi */
-    padding: 0.5rem 1rem; /* Wewnętrzne odstępy */
-    font-size: 1rem; /* Rozmiar tekstu */
-    font-weight: 600; /* Grubszy tekst */
-    cursor: pointer; /* Zmień kursor na wskazujący */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Płynna animacja */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtelny cień */
-  }
-  
-  button:hover {
-    background-color: $tertiary; /* Ciemniejszy niebieski przy hover */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Większy cień */
-  }
-  
-  button:active {
-    background-color: $tertiary; /* Jeszcze ciemniejszy niebieski przy aktywacji */
-    transform: scale(0.95); /* Subtelne zmniejszenie przy kliknięciu */
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* Mniejszy cień */
-  }
-  
+button {
+  background-color: $tertiary; /* Niebieski kolor */
+  color: #fff; /* Biały tekst */
+  border: none; /* Usuń domyślną ramkę */
+  border-radius: 8px; /* Zaokrąglone rogi */
+  padding: 0.5rem 1rem; /* Wewnętrzne odstępy */
+  font-size: 1rem; /* Rozmiar tekstu */
+  font-weight: 600; /* Grubszy tekst */
+  cursor: pointer; /* Zmień kursor na wskazujący */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Płynna animacja */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtelny cień */
+}
+
+button:hover {
+  background-color: $tertiary; /* Ciemniejszy niebieski przy hover */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Większy cień */
+}
+
+button:active {
+  background-color: $tertiary; /* Jeszcze ciemniejszy niebieski przy aktywacji */
+  transform: scale(0.95); /* Subtelne zmniejszenie przy kliknięciu */
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* Mniejszy cień */
+}
